@@ -1,0 +1,25 @@
+= Ruby Core Extensions
+
+Adds a bunch of new methods to Ruby's Core Library.
+
+
+== Installation
+
+In your application root do:
+
+$ git submodule add git://github.com/jazen/ruby-core-extensions.git vendor/plugins/ruby-core-extensions
+
+
+== Features
+
+=== Hash
+
+* pass(*keys)
+* block(*keys)
+
+
+More to come.
+
+
+
+Copyright (c) 2009 Stephan Schubert, released under the MIT license
