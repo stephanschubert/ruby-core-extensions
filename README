@@ -12,6 +12,10 @@ $ git submodule add git://github.com/jazen/ruby-core-extensions.git vendor/plugi
 
 == Features
 
+=== File
+
+* replace(pattern, string)
+
 === Hash
 
 * pass(*keys)
