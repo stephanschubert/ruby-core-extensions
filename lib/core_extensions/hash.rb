@@ -4,7 +4,7 @@ module CoreExtensions
     # >> { :a => 1, :b => 2 }.pass(:a)
     # => { :a => 1 }
     def pass(*keys)
-      select{ |k,v| keys.include? k }
+      delete_if { |k,v| !keys.include?(k) }
     end
 
     # >> { :a => 1, :b => 2 }.block(:a)
