@@ -24,6 +24,6 @@ module CoreExtensions
     def pluck(*keys)
       return *keys.map { |k| delete(k) }
     end
-    
+
   end
 end
