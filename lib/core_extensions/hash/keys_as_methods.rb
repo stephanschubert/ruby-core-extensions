@@ -15,7 +15,12 @@ module CoreExtensions
       # { :online => "1" }.online? # => true
       # { :online => "2" }.online? # => false
       #
-      def method_missing(name)
+      # Other method calls w/ arguments and/or block
+      # will still work as expected.
+      #
+      def method_missing(name, *args, &block)
+        super if args.size > 0 or block_given?
+
         if name.to_s =~ /\A(.+)\?\Z/
           key = $1
           val = indifferent_get(key)
