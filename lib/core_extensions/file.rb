@@ -7,9 +7,9 @@ module CoreExtensions
     # were any replacements and false otherwise.
     #
     def replace(pattern, string)
-      full_path = File.expand_path(path)
+      full_path = ::File.expand_path(path)
 
-      unless File.file?(full_path)
+      unless ::File.file?(full_path)
         raise ArgumentError, "#{path} is not a file."
       end
 
@@ -29,6 +29,6 @@ module CoreExtensions
 
       changed
     end
-    
+
   end
 end
