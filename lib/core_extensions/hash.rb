@@ -17,14 +17,14 @@ module CoreExtensions
     # => [ 1, 3 ]
     def pick(*keys)
       return *keys.map { |k| self[k] } if keys.size > 1
-      self[k]
+      self[keys.first]
     end
 
     # Same return value as #pick but deletes the
     # the keys from the hash also.
     def pluck(*keys)
       return *keys.map { |k| delete(k) } if keys.size > 1
-      delete(k)
+      delete(keys.first)
     end
 
   end
