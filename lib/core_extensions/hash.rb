@@ -9,9 +9,9 @@ module CoreExtensions
     #
     def pass(*keys)
       if keys.first.is_a?(Regexp)
-        delete_if { |k,v| k !~ keys.first }
+        reject { |k,v| k !~ keys.first }
       else
-        delete_if { |k,v| !keys.include?(k) }
+        reject { |k,v| !keys.include?(k) }
       end
     end
 
